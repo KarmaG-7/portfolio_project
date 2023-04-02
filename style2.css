@@ -1,0 +1,84 @@
+*{
+    font-family: 'Inter', sans-serif; 
+}
+
+body{ 
+    width: 100%; height: 100%;
+    background-image: url('images/background.jpeg') ;
+    background-size: 100% 100vh;
+}
+
+.totalOverview{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+
+.image{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 10px;
+    margin: 0px auto;
+    border: 4px solid  rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+img{
+    max-height: 500px;
+}
+
+.block_extraInfo{
+    display: grid;
+    padding: 0px 20px   
+}
+
+.movieInfo{
+    border: 4px solid  rgba(0,0,0,0.5);
+    margin-top: 90px;
+    padding: 10px 10px;
+    margin-left: 20px;
+    margin-right: 60px;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+}
+
+.budget,.overview,.revenue{
+    margin-bottom: 20px;
+    align-self:last baseline;
+}
+
+@media (max-width: 884px){
+
+    .totalOverview{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .image{
+        margin-top: 30px;
+    }
+
+    img{
+        max-height: 400px;
+    }
+
+    .movieInfo{
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 600px){
+
+    .totalOverview{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .movieInfo{
+        margin-top: 20px;  
+    }
+}

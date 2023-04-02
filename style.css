@@ -1,0 +1,207 @@
+
+*{
+    font-family: 'Inter', sans-serif;  
+    margin: 0px; padding: 0px;
+}
+
+header{
+    margin: 0px 20px;
+    display: grid;
+    height: 12vh;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    background-color:rgba(0,0,0,0.2);
+    text-shadow: 1px 3px 2px black; 
+    letter-spacing: 1px;   
+}
+
+.logo{
+    height: 8vh;
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+}
+
+body{
+    
+    width: 100%; height: 100%;
+    background-image: url('images/background.jpeg') ;
+    background-size: 100% 100vh;
+}
+
+h2{
+    color: white;
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center; 
+}
+
+.logIn{
+    justify-self: end;
+   
+}
+
+.logIn,.signUp{
+    text-decoration: none;
+    background-color: darkmagenta;
+    border-radius: 10px;
+    text-transform: uppercase; 
+    color: white;
+    width: 35%;
+    height: 4vh;
+    text-align: center;
+    padding-top: 6px;
+
+}
+
+.logIn:hover,.signUp:hover{
+
+    border: 6px solid black;
+    
+}
+
+.search_bttn{
+   
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+#search{
+    width: 70%;
+    height: 5vh;
+    border: 2px solid hotpink;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    justify-self: end;  
+}
+
+#submit{
+    width: 20%;
+    height: 5.7vh;
+    margin-left: 1px;
+    border: 2px solid hotpink;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: hotpink;
+    
+}
+
+#submit:hover{
+    background-color: hotpink;
+    color: white;
+}
+
+.fa-search:before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+}
+
+section{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+img{
+    border-radius: 3px;
+    height:35vh;
+    width: 100%
+}
+
+.allmovies{   
+    text-align: center;
+    margin: 10px 20px;
+}
+
+.movie_list{
+    border: 4px solid  rgba(0,0,0,0.2);
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+.name{
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: 4fr 1fr;
+}
+
+.rating:after {
+    content: "\f005";
+    color: gold;
+    margin-left: 3px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+}
+
+.name a{
+    text-decoration: none;
+}
+
+@media ((min-width: 945px) and (max-width:1250px)){
+    .allmovies{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    h2{
+        width: auto;
+        justify-self: start;
+    }
+    .logIn,.signUp{
+        font-size: small;
+        height: 3vh;
+    }
+   
+}
+
+@media ((min-width: 799px) and (max-width:944px)){
+    .allmovies{
+        grid-template-columns: repeat(2,1fr);
+    } 
+   .logIn,.signUp{
+    font-size: x-small;
+    height: 3vh;
+   }
+}
+
+@media (max-width:798px){
+
+    .allmovies{
+        grid-template-columns: 1fr;
+    } 
+    .logIn,.signUp{
+        height: 3vh;
+        font-size: x-small;
+    }
+    .logIn{
+        justify-self: center;
+    }
+    .signUp{
+        justify-self: start;
+    }
+    .allmovies{
+        width: 60%;
+        margin: 10px auto;
+    }
+    img{
+        max-width:fit-content;  
+    }
+    #search{
+        width: 60%;
+    }
+    .landing_text{
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+
+
+  
